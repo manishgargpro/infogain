@@ -79,6 +79,11 @@ entropyperattr = defaultdict(list)
 
 for a, b in z.items():
   entropyperattr[a].append(sum(b))
+  
+finallist = defaultdict(list)
 
 for a, b in entropyperattr.items():
-  print(a, ": ", averageentropy - b[0])
+  finallist[a].append(averageentropy - b[0])
+
+for a, b in sorted(finallist.items(), key=itemgetter(1), reverse=True):
+  print(a, ": ", b[0])
