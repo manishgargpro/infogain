@@ -27,8 +27,6 @@ for key, value in itertools.groupby(sortedbyclass, key=itemgetter('Class')):
     key: counter/total
   })
 
-numofclasses = len(percentofclass)
-
 attrlist = list(objectlist[0].keys())
 
 numofattr = defaultdict(lambda: defaultdict(list))
@@ -56,7 +54,7 @@ def entropy(p):
   avg = []
   for i in p:
     for key, value in i.items():
-      avg.append(-(value * math.log(value, numofclasses)))
+      avg.append(-(value * math.log(value, 2)))
   entropy = sum(avg)
   return entropy
 
