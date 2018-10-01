@@ -1,9 +1,0 @@
-Example,Crust Size,Shape,Filling Size,Class
-e1,big,circle,small,pos
-e2,small,circle,small,pos
-e3,big,square,small,neg
-e4,big,triangle,small,neg
-e5,big,square,big,pos
-e6,small,square,small,neg
-e7,small,square,big,pos
-e8,big,circle,big,pos
